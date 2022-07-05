@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>location</title>
+</head>
+<body>
+    <span>
+        <button id="getlocation">Get Location</button>
+        <img src="images/map.png"class="map" id="mapImage">
+
+
+           
+            
+            
+        <script src="js/location.js"></script>
+      </span>
+</body>
+</html>
+<script>
+    const getLocation=document.getElementById("getlocation");
+getLocation.addEventListener('click',evt=>{
+    if('geolocation' in navigator){
+        navigator.geolocation.getCurrentPosition(Position=>{
+            let latitude=Position.coords.latitude;
+            let longitude=Position.coords.longitude;
+
+            let geoogleMapURL=`https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=11&size=800x800`;
+            const mapImage=document.getElementById("mapImage");
+            mapImage.src =geoogleMapURL;
+
+
+
+            console.log(latitude,longitude);
+        },error=>{
+            console.log(error.code);
+        
+        });
+        
+
+    }else{
+        console.log("Not Supported");
+    }
+});
+
+</script>
