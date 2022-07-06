@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.18.1",
+    "express.js": "^1.0.0",
+    "firebase-admin": "^11.0.0",
+    "nodemon": "^2.0.19",
+    "uuid": "^8.3.2"
+  },
+  "name": "easyrent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezzrent/ezzRent.git"
+  },
+  "author": "theUnixe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezzrent/ezzRent/issues"
+  },
+  "homepage": "https://github.com/ezzrent/ezzRent#readme",
+  "devDependencies": {},
+  "description": ""
+}

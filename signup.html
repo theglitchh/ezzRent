@@ -1,41 +1,33 @@
-<!-- <?php include('server.php') ?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title> EzzRent: Create Account</title>
     <link rel="stylesheet" href="css/signup.css">
-    <link rel="stylesheet" href="php/server.php">
 </head>
 <body>
 <img src="images/512x512.gif" class="loader" alt="Loading..." >
 <div class="alert-box"> <!--- Alert Box  **put show after alert-box-->
-    <img src="images/error.png" alt="" class="alert-img">
+    <img src="image/error.png" alt="" class="alert-img">
     <p class="alert-msg">Error message</p>
 
 </div>
 
 <div class="container">
     <div class="logo"><a href="#">Ezz<span>Rent.</span></a></div>
-    <form action="php/server.php" method="POST">
     <div>
-        <label for="name"></label><input type ="text" autocomplete="off" id="name" name="username" placeholder="name">
-        <label for="email"></label><input type = "email" autocomplete="off" id="email" name="email"placeholder="email">
-        <label for="password"></label><input type = "password" autocomplete="off" id="password" name="password" placeholder="password">
-        <label for="number"> </label><input type = "text" autocomplete="off" id="number" name="number" placeholder="number">
-        
+        <label for="name"></label><input type ="text" autocomplete="off" id="name" placeholder="name">
+        <label for="email"></label><input type = "email" autocomplete="off" id="email" placeholder="email">
+        <label for="password"></label><input type = "password" autocomplete="off" id="password" placeholder="password">
+        <label for="number"> </label><input type = "text" autocomplete="off" id="number" placeholder="number">
         <input type = "checkbox" class="checkbox" id="termscond">
          <label for="termscond">"I agree to the <a href="#">terms and conditions</a>"</label>
-         <br>
+       <br>
         <input type = "checkbox" class="checkbox" id="notification">
         <label for="notification">receive upcoming offers through mails</label>
-        <br>
-        <p class="upload"><a href="3"></a>please upload your id..</p>
-        <label for="file-upload"></label> <input type="file" id="file-uploader" multiple>
-        <button class="submit-btn" name="reg_user">Create Account</button>
-    </form>
+        <button class="submit-btn">Create Account</button>
     </div>
-    <a href="login.html" class="link">Already have an account? Log in here</a>
+    <a href="/login.html" class="link">Already have an account? Log in here</a>
 </div>
 <script src="js/form.js"></script>
 <script src="js/token.js"></script>

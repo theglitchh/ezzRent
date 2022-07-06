@@ -35,7 +35,8 @@ submitBtn.addEventListener('click',() =>{
            notification: notification.checked,
            seller: false
        })
-  // }
+  
+    
 })
 // send data  function
 const sendData=(path, data) =>{
@@ -53,6 +54,7 @@ const processData = (data) =>{
     if (data.alert){
         showAlert(data.alert);
     } else if (data.name){
+        
         //create authToken
         data.authToken = generateToken(data.email);
     }
