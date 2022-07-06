@@ -37,10 +37,8 @@ app.get('/signup', (req,res)=>{
 })
 
 app.post('/signup',(req, res) =>{
-    // console.log(req.body);
-    
     let{name ,email ,password , number, tac, notification} = req.body;
-
+    
     //form validation
     if(name.length < 3){
         return res.json({'alert': 'name must be 3 letters long'})
@@ -55,9 +53,8 @@ app.post('/signup',(req, res) =>{
         return res.json({'alert':'Number must be at least 10 digits long'});
     } else if(!tac){
         return res.json({'alert':'You must agree to our terms and conditions'});
-    } else{
-        res.json('data recieved');
-    }
+    } 
+    //store user in db
     db.collection('users').doc(email).get()
     .then(user => {
         if(user.exists){
@@ -72,7 +69,7 @@ app.post('/signup',(req, res) =>{
                         res.json({
                             name: req.body.name,
                             email: req.body.email,
-                            // seller: req.body.seller,
+                            seller: req.body.seller,
                         })
                     })
                 })
@@ -80,8 +77,6 @@ app.post('/signup',(req, res) =>{
 
         }
     })
-// })
-
 })
 
 app.listen(4000,()=>{
