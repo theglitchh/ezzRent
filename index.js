@@ -11,7 +11,7 @@ const path =  require('path');
 
 
 
-let  serviceAccount = require("./ezzrent-d1771-firebase-adminsdk-79rpm-170309d6a2.json");
+let  serviceAccount = require("./easyrent-aa461-firebase-adminsdk-gb1wy-0772e0d20a.json");
 const { database } = require('firebase-admin');
 
 admin.initializeApp({
@@ -64,7 +64,7 @@ app.post('/signup',(req, res) =>{
             bcrypt.genSalt(10, (err, salt) => {
                 bcrypt.hash(password, salt, (err, hash) => {
                     req.body.password = hash;
-                    db.collection('users').doc(email).set(req.body)
+                    db.collection('test1').doc(email).set(req.body)
                     .then(data => {
                         res.json({
                             name: req.body.name,

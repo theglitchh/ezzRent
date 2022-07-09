@@ -70,7 +70,7 @@ const processData = (data) =>{
         //create authToken
         data.authToken = generateToken(data.email);
         sessionStorage.user =JSON.stringify(data);
-        location.replace('/');
+        location.replace('/')
     }
 }
 // calling alert function
