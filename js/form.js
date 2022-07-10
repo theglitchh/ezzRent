@@ -33,7 +33,7 @@ submitBtn.addEventListener('click',() =>{
            password: password.value,
            number: number.value,
            tac: tac.checked,
-           notification: notification.checked,
+        //    notification: notification.checked,
            seller: false
        })
     }

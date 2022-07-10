@@ -37,7 +37,9 @@ app.get('/signup', (req,res)=>{
 })
 
 app.post('/signup',(req, res) =>{
-    let{name ,email ,password , number, tac, notification} = req.body;
+    console.log(req.body)
+    res.json("data recived")
+    let{name ,email ,password , number, tac} = req.body;
     
     //form validation
     if(name.length < 3){
@@ -64,12 +66,12 @@ app.post('/signup',(req, res) =>{
             bcrypt.genSalt(10, (err, salt) => {
                 bcrypt.hash(password, salt, (err, hash) => {
                     req.body.password = hash;
-                    db.collection('test1').doc(email).set(req.body)
+                    db.collection('users').doc(email).set(req.body)
                     .then(data => {
                         res.json({
                             name: req.body.name,
                             email: req.body.email,
-                            seller: req.body.seller,
+                            // seller: req.body.seller,
                         })
                     })
                 })
