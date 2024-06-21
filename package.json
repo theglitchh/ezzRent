@@ -5,7 +5,7 @@
     "express.js": "^1.0.0",
     "firebase-admin": "^12.0.0",
     "nodemon": "^3.0.0",
-    "uuid": "^9.0.0"
+    "uuid": "^10.0.0"
   },
   "name": "easyrent",
   "version": "1.0.0",
